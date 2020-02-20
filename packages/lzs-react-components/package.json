@@ -1,0 +1,16 @@
+{
+  "name": "@lzs/react-components",
+  "version": "0.0.2",
+  "description": "react components",
+  "keywords": [
+    "react",
+    "components"
+  ],
+  "author": "seanlo",
+  "homepage": "https://github.com/seanlo/lzs#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "@lzs/utils": "^1.0.2"
+  }
+}

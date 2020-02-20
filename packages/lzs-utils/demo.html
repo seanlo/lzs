@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>@lzs/utils</title>
+  </head>
+  <body>
+    <div id="countdown"></div>
+    <script src="./src/countdown.js"></script>
+    <script>
+      var s2ts = function(str) {
+        /***
+			arg example:
+			str = '2015/09/09 23:59:59'
+			***/
+        return Date.parse(new Date(str).toString());
+      };
+      var count = new Countdown({
+        element: document.getElementById("countdown"),
+        referTime: s2ts("2016/03/31 16:00:00"),
+        endTime: s2ts("2016/03/31 16:00:20"),
+        nodeTimes: [s2ts("2016/03/31 16:00:05"), s2ts("2016/03/31 16:00:10")],
+        onEnd: function() {
+          console.log("end");
+          console.log(this);
+        },
+        onTime: function(i, time) {
+          console.log(i + ":" + time);
+          console.log(this);
+        }
+      });
+    </script>
+    <script src="./src/imageloader.js"></script>
+    <script>
+      var a = new ImageLoader({
+        images: [],
+        onEachComplete: function() {
+          console.log(this.complete + "/" + this.total);
+        },
+        onComplete: function() {
+          console.log("end");
+        }
+      });
+    </script>
+  </body>
+</html>
