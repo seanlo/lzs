@@ -1,6 +1,6 @@
 {
   "name": "@lzs/react-components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "react components",
   "keywords": [
     "react",
@@ -11,6 +11,6 @@
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
-    "@lzs/utils": "^1.0.2"
+    "@lzs/utils": "^1.0.3"
   }
 }
